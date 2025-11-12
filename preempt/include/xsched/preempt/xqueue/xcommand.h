@@ -6,6 +6,7 @@
 #include <functional>
 #include <condition_variable>
 
+#include "xsched/utils/common.h"
 #include "xsched/types.h"
 
 namespace xsched::preempt
@@ -58,7 +59,7 @@ enum XCommandState
     kCommandStateMax        = 4,
 };
 
-class XCommand : public std::enable_shared_from_this<XCommand>
+class EXPORT_CXX_FUNC XCommand : public std::enable_shared_from_this<XCommand>
 {
 public:
     XCommand(XCommandType type, XCommandProperties props = kCommandPropertyNone)
