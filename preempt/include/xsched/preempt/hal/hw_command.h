@@ -12,7 +12,7 @@ namespace xsched::preempt
 
 class XQueue;
 
-class HwCommand : public XCommand
+class EXPORT_CXX_FUNC HwCommand : public XCommand
 {
 public:
     HwCommand(XCommandProperties props = kCommandPropertyNone);
@@ -75,7 +75,7 @@ private:
     std::shared_ptr<XQueue> xqueue_ = nullptr;
 };
 
-class HwCallbackCommand final : public HwCommand
+class EXPORT_CXX_FUNC HwCallbackCommand final : public HwCommand
 {
 public:
     HwCallbackCommand(LaunchCallback launch, void *data)
