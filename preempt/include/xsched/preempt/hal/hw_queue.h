@@ -16,7 +16,7 @@ namespace xsched::preempt
 class XQueue;
 using CommandLog = std::list<std::shared_ptr<HwCommand>>;
 
-class HwQueue
+class EXPORT_CXX_FUNC HwQueue
 {
 public:
     HwQueue() = default;
@@ -76,7 +76,7 @@ private:
     std::shared_ptr<XQueue> xq_ = nullptr;
 };
 
-class HwQueueManager
+class EXPORT_CXX_FUNC HwQueueManager
 {
 public:
     STATIC_CLASS(HwQueueManager);
